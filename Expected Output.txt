@@ -1,0 +1,21 @@
+Lab 2: Bronze Expected Output
+
+Food Added Successfully: Name: Apple Calories: 120 Cost: 2
+Food Added Successfully: Name: Banana Calories: 180 Cost: 1
+
+Vending Machine Interface:
+Contains: 10 Food Items
+Item 0 is Empty
+Item 1 is Empty
+Item 2 is Empty
+Item 3 is Name: Apple Calories: 120 Cost: 2
+Item 4 is Empty
+Item 5 is Empty
+Item 6 is Name: Banana Calories: 180 Cost: 1
+Item 7 is Empty
+Item 8 is Empty
+Item 9 is Empty
+Successfully rejected adding to an occupied spot in the array: Name: Invalid Calories: 0 Cost: 0
+Successfully rejected adding to an occupied spot in the array: Name: Invalid Calories: 0 Cost: 0
+Successfully rejected adding to index 10
+Successfully rejected adding to index -1: Name: Invalid Calories: 0 Cost: 0
