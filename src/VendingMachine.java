@@ -39,10 +39,12 @@ public class VendingMachine
             boolean returnVal = false;
             // if spot is valid, and empty, add the food and return true
             // otherwise return false.
+            if (index >= 0 && index < maxSize) {
 
-            if(foodArray[index] == null){
-                  foodArray[index] = newFood;
-                  returnVal = true;
+                  if (foodArray[index] == null ) {
+                        foodArray[index] = newFood;
+                        returnVal = true;
+                  }
             }
 
             return returnVal;
@@ -51,10 +53,16 @@ public class VendingMachine
       // To String for the Vending Machine - prints out all foods including the index of the array they are stored in. 
       // See the Expected Output document for details. 
       public String toString(){
-            String st = "Vending Machine Interface:";
+            String st= "\n" + "Vending Machine Interface:" + "\n" +  "Contains: "  + size() + " Food Items"+"\n";
 
-
-            
+            for(int i=0;i<maxSize;i++){
+                  if(foodArray[i] == null){
+                        st = st + "Item " + i + " is Empty" + "\n";
+                  }
+                  if(foodArray[i] != null){
+                        st = st + "Item " + i + " is Name: " + foodArray[i].toString() +"\n";
+                  }
+            }
             return st;
       }
 
