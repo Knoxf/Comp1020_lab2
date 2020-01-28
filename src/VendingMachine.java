@@ -2,11 +2,23 @@
 public class VendingMachine
 {
 
+      Food[] foodArray;
+      static int maxSize = 10;
 
-      // Return the count of all valid Food objects in the machine. 
+      public VendingMachine(){
+            foodArray = new Food[maxSize];
+      }
+
+
+      // Return the count of all valid Food objects in the machine.
       // It should skip over null values of the array and not count them
       public int countFood(){
             int count = 0;
+            for(int i=0;i<maxSize;i++){
+                  if(foodArray[i] != null){
+                        count++;
+                  }
+            }
 
             return count;
       }
@@ -14,7 +26,7 @@ public class VendingMachine
       // returns the size of the current array, or 0 if it is null
       // We just need this to access the array since the array should be private.
       public int size(){
-           return 0;
+            return maxSize;
       }
 
       // Add food to the array at a given index if it is valid and not already assigned
@@ -26,7 +38,12 @@ public class VendingMachine
       public boolean addFood(Food newFood, int index){
             boolean returnVal = false;
             // if spot is valid, and empty, add the food and return true
-            // otherwise return false. 
+            // otherwise return false.
+
+            if(foodArray[index] == null){
+                  foodArray[index] = newFood;
+                  returnVal = true;
+            }
 
             return returnVal;
       }
@@ -35,13 +52,15 @@ public class VendingMachine
       // See the Expected Output document for details. 
       public String toString(){
             String st = "Vending Machine Interface:";
+
+
             
             return st;
       }
 
       public static void main(String[] args){
             // Run tests of individual objects
-            // testLab1();
+            //testLab1();
             testLab2();
       }
 
